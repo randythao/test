@@ -7,5 +7,7 @@
 # $4 = VM host name
 
 # update package lists
-sudo apt-get update -y
-sudo apt-get install krb5-user samba sssd sssd-tools libnss-sss libpam-sss ntp ntpdate realmd adcli -y
+sudo apt-get -qq install realmd adcli sssd -y
+sudo apt-get -qq install ntp -y
+sudo apt-get -qq install -y sssd-tools samba-common krb5-user curl
+sudo apt-get -qq install -f -y
